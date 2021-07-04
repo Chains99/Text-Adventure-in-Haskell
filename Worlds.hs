@@ -59,7 +59,7 @@ suramarE6 = World "Suramar" "Episodio 6" "Te has desmayado y has perdido el perg
 
 --Episode 7
 draenorE7 :: World
-draenorE7 = World "Draenor" "Episodio 7" "Hola me alegra saber que estás vivo, ya puedes completar la misión.\n Tu próxima misión es viajar Ogrimar y matar al jefe de la aldea y entregarme su cabeza " "Regresando a Draenor..." [ogrimarE8] ["volver","sylvanas"]
+draenorE7 = World "Draenor" "Episodio 7" "Hola me alegra saber que estás vivo, ya puedes completar la misión.\n Tu próxima misión es viajar Ogrimar y matar al jefe de la aldea y entregarme su cabeza " "Regresando a Draenor..." [ogrimarE8] ["regresar","sylvanas"]
 
 --Episode 8
 ogrimarE8 :: World
