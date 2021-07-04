@@ -20,18 +20,18 @@ data World =
 
 --Episode 1
 undercityE1  :: World
-undercityE1  = World "Entrañas" "Episodio 1" "Extraordinario! al fin has llegado, te he esperado por mucho tiempo. Sylvanas está anciosa por conocerte. Debes viajar a Draenor ella te dará tus primeras misiones " "" [draenorE2] []
+undercityE1  = World "Entrañas" "Episodio 1" "Extraordinario! al fin has llegado, te he esperado por mucho tiempo. Sylvanas está ansiosa por conocerte. Debes viajar a Draenor ella te dará tus primeras misiones " "" [draenorE2] []
 
 --Episode 2
 draenorE2 :: World
-draenorE2  = World "Draenor" "Episodio 2" "Bienvenido a Draenor, estaba anciosa por conocerte, necesito tu ayuda para estas misiones. Escoge una de estas dos:\n 1 - Debes viajar a Suramar y hablar con la princesa Lina, ella te explicará.\n 2 - Debes ir a Claros de Tristral y encontrar el collar de escama de Dragón en el fondo del río" "Viajando a Draenor..." [clarosdeTristalE3,suramarE3] ["viajar", "draenor"]
+draenorE2  = World "Draenor" "Episodio 2" "Bienvenido a Draenor, estaba ansiosa por conocerte, necesito tu ayuda para estas misiones. Escoge una de estas dos:\n 1 - Debes viajar a Suramar y hablar con la princesa Lina, ella te explicará.\n 2 - Debes ir a Claros de Tristral y encontrar el collar de escama de Dragón en el fondo del río" "Viajando a Draenor..." [clarosdeTristalE3,suramarE3] ["viajar", "draenor"]
 
 --Episode 3
 clarosdeTristalE3 :: World
 clarosdeTristalE3  = World "Claros de Tristal" "Episodio 3" "Bienvenido a Claros de Tristal. Cerca del río se encuentra un granjero talando árboles. Te mira detenidamente, al parecer quiere decirte algo, debes acercarte a él" "Yendo a Claros de Tristal..." [clarosdeTristalE4] ["viajar", "claros" , "tristal"]
 
 suramarE3 :: World
-suramarE3  = World "Suramar" "Episodio 3" "Holaaaaaaaaa?! A dónde me habrá llevado ese portal? pffff... Se acerca una joven hermosa y respode:\n -Hola estás en Suramar, a quién buscas?" "Viajando a Suramar..." [suramarE4] ["viajar", "suramar" ]
+suramarE3  = World "Suramar" "Episodio 3" "Holaaaaaaaaa?! A dónde me habrá llevado ese portal? pffff... Se acerca una joven hermosa y responde:\n -Hola estás en Suramar, a quién buscas?" "Viajando a Suramar..." [suramarE4] ["viajar", "suramar" ]
 
 --Episode 4
 suramarE4 :: World
@@ -55,7 +55,7 @@ clarosdeTristalE6 :: World
 clarosdeTristalE6 = World "Claros de Tristal" "Episodio 6" "Ahora estamos a mano. Continúa tu camino y recuerda ¡Todo Por la Horda!\n Has recuperado el collar deber volver con Sylvanas y completar la misión" "Entregando las flores... " [draenorE7] ["tomar","flores"]
 
 suramarE6 :: World
-suramarE6 = World "Suramar" "Episodio 6" "Te has desmayado y has perdido el pergamino. Medio borroso se acerca alguien y preguntas ¿Quién eres?. Ella responde: \n Soy yo, Lina, la guerra ha comenzado Sylvanas necesita tu ayuda. Usa esta piedra, te transportá al portal más cercano a la guerra en Dalarán" "Regresando a Draenor" [dalaranE9] ["luchar"]
+suramarE6 = World "Suramar" "Episodio 6" "Te has desmayado y has perdido el pergamino. Medio borroso se acerca alguien y preguntas ¿Quién eres?. Ella responde: \n Soy yo, Lina, la guerra ha comenzado Sylvanas necesita tu ayuda. Usa esta piedra, te transportá al portal más cercano a la guerra en Dalarán" "Luchando con los elfos de la noche..." [dalaranE9] ["luchar"]
 
 --Episode 7
 draenorE7 :: World
@@ -67,7 +67,7 @@ ogrimarE8 = World "Ogrimar" "Episodio 8" "El mercader de la ciudad viene corrien
 
 --Episode 9
 dalaranE9 :: World
-dalaranE9 = World "Dalarán" "Episodio 9" "Ayudaaaaaaaaaa, desde lejos sientes la voz de Sylvanas, por otro lado el jefe de la Alianza lucha con uno de los orcos, y deja caer su cetro mágico. En tu interior piensas:\n -Si lo tuviese fuera el jefe más poderoso de la Horda, Sylvanas no reinaría más\n. - No se que hacer, conciencia mía, ayúdame a decidir" "Transportándose a Dalarán" [dalaranE10_1,dalaranE10_2] ["usar", "piedra" ]
+dalaranE9 = World "Dalarán" "Episodio 9" "Ayudaaaaaaaaaa, desde lejos sientes la voz de Sylvanas, por otro lado el jefe de la Alianza lucha con uno de los orcos, y deja caer su cetro mágico.\n En tu interior piensas: Si lo tuviese fuera el jefe más poderoso de la Horda, Sylvanas no reinaría más. \n - No se que hacer, conciencia mía, ayúdame a decidir" "Transportándose a Dalarán" [dalaranE10_1,dalaranE10_2] ["usar", "piedra" ]
 
 --Episode 10 Final
 dalaranE10_1 :: World

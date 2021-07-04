@@ -1,12 +1,10 @@
 module SentenceAnalyzer where
 
 import Worlds
-import Synonyms
-import Data.List 
-import Data.Char 
 import Data.Maybe
-import Data.Map (Map)
 import qualified Data.Map as Map
+import Data.Char
+import Synonyms
 
 splitSentence :: String -> [String]
 splitSentence "" = []
@@ -15,11 +13,17 @@ splitSentence xs = ys : (splitSentence . drop 1) zs
 
 isKeywordWorld :: [String]  -> [String] -> Bool 
 isKeywordWorld [] _ = True
-isKeywordWorld (x:xs) splitList | (notElem x splitList && isNothing value) || (not (isNothing value) && notElem x (fromJust value))= False
+isKeywordWorld (x:xs) splitList | ( isNotElem && isNothing value) || (isNotElem && isJust value && not (inCommon splitList (fromJust value) ))= False
                                 | otherwise = isKeywordWorld xs splitList
                                 where value =  Map.lookup x allSynonyms
-                                   
+                                      isNotElem = x `notElem` splitList
 
+inCommon :: [String] -> [String] -> Bool 
+inCommon [] _ = False 
+inCommon _ [] = False 
+inCommon (x:xs) syn |  x `elem` syn = True 
+                    | otherwise  = inCommon xs syn
+                                   
 isContained :: [World] -> [String] -> (Maybe World,Bool) 
 isContained [] _ = (Nothing , False  )  
 isContained _ [] = (Nothing, False)
