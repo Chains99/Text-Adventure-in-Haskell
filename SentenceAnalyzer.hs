@@ -15,7 +15,7 @@ isKeywordWorld (x:xs) splitList | not (x `elem` splitList) = False
                                 | otherwise = isKeywordWorld xs splitList
 
 isContained :: [World] -> [String] -> (Maybe World,Bool) 
-isContained [] _ = (Nothing , False)  
+isContained [] _ = (Nothing , True )  
 isContained _ [] = (Nothing,False)
 isContained (x:xs) splitList | isKeywordWorld (keywords x) splitList = (Just x,True)  
                              | otherwise = isContained xs splitList                        
