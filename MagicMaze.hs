@@ -10,23 +10,24 @@ gameIntro = do
     putStrLn ">> Tu objetivo sera realizar las misiones para ayudar a la Horda y ganarte un renombre en los distintos mundos\n"
 
 manageGame :: World -> IO()
-manageGame (World name episode story nW kW )  =  do
-    printStory name episode story
+manageGame (World name episode story action nW kW )  =  do
+    printStory name episode story 
     line <- getLine
-    putStrLn $ "<< " ++ line
-    let processedLine = manageAnalyzer (World name episode story nW kW ) line
+    let processedLine = manageAnalyzer (World name episode story action nW kW ) line
     if not $ snd processedLine
-    then  
-        manageGame (World name episode story nW kW )
+    then do
+        putStrLn ">> Ups no te hemos entendido. Escribe correctamente que deseas hacer.\n"  
+        manageGame (World name episode story action nW kW )
     else do
-        let newWorld = fst processedLine
-        manageGame $ fromJust newWorld
+        let newWorld = fromJust $ fst processedLine
+        putStrLn $ "\n<< " ++ actionWorld newWorld  ++ "\n"
+        manageGame newWorld
 
 
 printStory :: String -> String ->String -> IO()
 printStory name episode story = do
     putStrLn $ episode ++ ": " ++ name
-    putStrLn $ ">> " ++ story
+    putStrLn $ ">> " ++ story ++ "\n"
 
 main = do
     gameIntro
